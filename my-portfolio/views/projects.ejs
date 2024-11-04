@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>项目 | Max Verstappen</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <script src="/javascripts/script.js"></script>
+    <style>
+        /* 基础样式 */
+        body {
+            font-family: Arial, sans-serif;
+            color: #FFFFFF;
+            background-color:white; /* 深色背景 */
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 顶部导航栏 */
+        nav {
+            background-color: rgb(249, 249, 251);
+            color: rgb(38, 38,38 );
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav h1 {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+            margin: 0;
+        }
+
+        nav ul li a {
+            color: rgb(38, 38,38 );
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #000;
+        }
+
+        /* 主内容容器 */
+        .projects-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 3rem 1rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+
+        /* 单个项目卡片 */
+        .project-card {
+            background-color: #1E1E1E;
+            border-radius: 8px;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: scale(1.05);
+        }
+
+        .project-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .project-card h3 {
+            font-size: 1.5rem;
+            color: #FF0000;
+            margin: 1rem 0 0.5rem;
+        }
+
+        .project-card p {
+            font-size: 1rem;
+            color: #CCCCCC;
+            padding: 0 1rem;
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: #333;
+            color: #FFF;
+            padding: 1rem;
+            text-align: center;
+            font-size: 0.9rem;
+            margin-top: 3rem;
+            position: fixed; /* 固定在页面底部 */
+            bottom: 0;
+            left: 0;
+            width: 100%; /* 占据整个页面宽度 */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 顶部导航栏 -->
+    <nav>
+        <div class="logo">
+            <img src="/images/logo.png" alt="Red Bull Racing Logo" width="30">
+            <h1>Red Bull Web</h1>
+        </div>
+        <ul>
+            <li><a href="/">主页</a></li>
+            <li><a href="/about">关于我</a></li>
+            <li><a href="/projects">项目</a></li>
+            <li><a href="/contact">联系</a></li>
+            <li><a href="/services">服务</a></li>
+        </ul>
+    </nav>
+
+    <!-- 项目内容 -->
+    <div class="projects-container">
+        <!-- 项目 1 -->
+        <div class="project-card">
+            <img src="/images/management.png" alt="项目 1 图片">
+            <h3>餐厅订餐系统</h3>
+            <p>角色：项目经理</p>
+            <p>角色描述：用户可以浏览菜单、选择菜品并下单。餐厅管理人员可以更新菜单、查看订单并管理订单状态。送餐员可以查看待配送的订单并标记订单为已送达。</p>
+            <p>结果：提高了点餐和订单处理效率，减少了客户等待时间，优化了餐厅的管理流程，并提供用户友好的点餐体验。</p>
+        </div>
+        
+        <!-- 项目 2 -->
+        <div class="project-card">
+            <img src="/images/staff.jpg" alt="项目 2 图片">
+            <h3>人员管理系统</h3>
+            <p>角色：开发人员</p>
+            <p>角色描述：管理员可以添加、删除、更新员工信息并分配工作任务。员工可以查看自己的个人信息、更新联系方式并查看分配的任务或工作安排。</p>
+            <p>结果：简化了员工管理流程，提高了人力资源管理效率，提供了员工数据的集中化存储和可追溯性，提升了组织的整体运营效率。</p>
+        </div>
+        
+        <!-- 项目 3 -->
+        <div class="project-card">
+            <img src="/images/engineering.jpg" alt="项目 3 图片">
+            <h3>网页订票系统</h3>
+            <p>角色：后端测试工程师</p>
+            <p>角色描述：用户可以浏览可用的活动、选择场次和座位并在线购票。管理员可以管理活动信息、座位分配和用户的购票记录，并进行系统维护。</p>
+            <p>结果：实现了购票流程的自动化，减少了人工售票的压力，并为用户提供便捷的在线购票服务，显著提升了用户的购票体验。</p>
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <footer>
+        <p>&copy; 2024  | Junbo Sun</p>
+    </footer>
+
+</body>
+</html>

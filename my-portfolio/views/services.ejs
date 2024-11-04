@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>服务 | Max Verstappen</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <script src="/javascripts/script.js"></script>
+    <style>
+        /* 基础样式 */
+        body {
+            font-family: Arial, sans-serif;
+            color: #FFFFFF;
+            background-color: white; /* 深色背景 */
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 顶部导航栏 */
+        nav {
+            background-color:rgb(249, 249, 251);
+            color:  rgb(38, 38,38 );
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav h1 {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+            margin: 0;
+        }
+
+        nav ul li a {
+            color: rgb(38, 38,38 );
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #000;
+        }
+
+        /* 服务内容容器 */
+        .services-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 3rem 1rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+
+        /* 单个服务卡片 */
+        .service-card {
+            background-color: #1E1E1E;
+            border-radius: 8px;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: scale(1.05);
+        }
+
+        .service-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            color: #FF0000;
+            margin: 1rem 0 0.5rem;
+        }
+
+        .service-card p {
+            font-size: 1rem;
+            color: #CCCCCC;
+            padding: 0 1rem 1.5rem;
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: #333;
+            color: #FFF;
+            padding: 1rem;
+            text-align: center;
+            font-size: 0.9rem;
+            margin-top: 3rem;
+            position: fixed; /* 固定在页面底部 */
+            bottom: 0;
+            left: 0;
+            width: 100%; /* 占据整个页面宽度 */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 顶部导航栏 -->
+    <nav>
+        <div class="logo">
+            <img src="/images/logo.png" alt="Red Bull Racing Logo" width="30">
+            <h1>Red Bull Web</h1>
+        </div>
+        <ul>
+            <li><a href="/">主页</a></li>
+            <li><a href="/about">关于我</a></li>
+            <li><a href="/projects">项目</a></li>
+            <li><a href="/services">服务</a></li>
+            <li><a href="/contact">联系</a></li>
+        </ul>
+    </nav>
+
+    <!-- 服务内容 -->
+    <div class="services-container">
+        <!-- 编程服务 -->
+        <div class="service-card">
+            <img src="/images/program.png" alt="编程服务图片">
+            <h3>通用编程</h3>
+            <p>提供高效的通用编程服务，帮助您实现复杂的算法和系统设计。</p>
+        </div>
+        
+        <!-- 网页开发服务 -->
+        <div class="service-card">
+            <img src="/images/web.png" alt="网页开发服务图片">
+            <h3>网页开发</h3>
+            <p>从前端到后端的网页开发服务，确保您的网站快速、安全且易于维护。</p>
+        </div>
+        
+        <!-- 移动应用服务 -->
+        <div class="service-card">
+            <img src="/images/app.png" alt="移动应用服务图片">
+            <h3>移动应用开发</h3>
+            <p>为iOS和Android提供现代化的移动应用开发，让您的应用脱颖而出。</p>
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <footer>
+        <p>&copy; 2024  | Junbo Sun</p>
+    </footer>
+
+</body>
+</html>

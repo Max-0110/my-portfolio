@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>Junbo Sun | 个人作品集</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <script src="/javascripts/script.js"></script>
+    <style>
+        /* 基础样式 */
+        body {
+            font-family: Arial, sans-serif;
+            color: #FFFFFF;
+            background-color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* logo样式 */
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 40px; /* logo大小 */
+            height: auto;
+            margin-right: 10px;
+        }
+
+        /* 顶部导航栏 */
+        nav {
+            background-color: rgb(249, 249, 251);
+            color: rgb(38, 38, 38);
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav h1 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 0;
+            color: rgb(38, 38, 38);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+            margin: 0;
+        }
+
+        nav ul li a {
+            color: rgb(38, 38, 38);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #000;
+        }
+
+        /* 主内容 */
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 3rem 1rem;
+            min-height: 100vh;
+        }
+
+        .container h1 {
+            font-size: 3rem;
+            color: black;
+        }
+
+        .container h2 {
+            font-size: 1.8rem;
+            color: black;
+        }
+
+
+        .container p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+            color: black;
+        }
+
+        /* 图片样式 */
+        .profile-pic {
+            width: 100%;
+            max-width: 800px;
+            border-radius: 10px;
+            margin: 2rem 0;
+            box-shadow: 0px 4px 20px gray;
+        }
+
+        /* 按钮样式 */
+        .cta-button {
+            background-color: rgb(11, 88, 219);
+            color: #FFFFFF;
+            padding: 1rem 2rem;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 2rem;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+        }
+
+        .cta-button:hover {
+            background-color: #FF4C4C;
+        }
+
+        /* 作品集展示区 */
+        .portfolio-section {
+            margin-top: 3rem;
+            width: 100%;
+            max-width: 800px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 三列布局 */
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .portfolio-item {
+            background-color: #f0f0f0;
+            color: #333;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: 200px; /* 固定高度 */
+            object-fit: cover; /* 确保图片适配 */
+            display: block;
+        }
+
+        .portfolio-item h3 {
+            margin: 0;
+            padding: 1rem;
+            font-size: 1.2rem;
+            background-color: #FF0000;
+            color: #FFF;
+        }
+
+        .portfolio-item p {
+            padding: 1rem;
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: #333;
+            color: #FFF;
+            padding: 1rem;
+            text-align: center;
+            font-size: 0.9rem;
+            margin-top: 3rem;
+            position: relative;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 顶部导航栏 -->
+    <nav>
+        <div class="logo">
+            <img src="/images/logo.png" alt="Red Bull Racing Logo"> <!-- logo图片 -->
+            <h1>Red Bull Web</h1>
+        </div>
+        <ul>
+            <li><a href="/">主页</a></li>
+            <li><a href="/about">关于我</a></li>
+            <li><a href="/projects">项目</a></li>
+            <li><a href="/contact">联系</a></li>
+            <li><a href="/services">服务</a></li>
+        </ul>
+    </nav>
+
+    <!-- 主内容 -->
+    <div class="container">
+        <h1>Junbo Sun</h1>
+        <h2>欢迎来到我的网页</h2>
+        <p>我是一名软件开发工程师，专注于构建高效、创新的数字解决方案，致力于将复杂的问题简化为易于实现的技术方案。拥有丰富的编程经验和扎实的技术基础，精通前端和后端技术栈，擅长使用 JavaScript、Python、Node.js 等多种开发工具与框架。</p>
+        <a href="/about" class="cta-button">了解更多</a> <!-- 链接到关于我页面 -->
+
+        <!-- 作品集展示区 -->
+        <div class="portfolio-section">
+            <div class="portfolio-item">
+                <img src="/images/resturant.png" alt="项目1图片">
+                <h3>点餐系统</h3>
+                <p>点餐系统是一种数字化平台，简化餐厅点餐和管理流程，通过高效的用户界面和实时订单处理提升顾客体验和运营效率。</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="/images/people.jpeg" alt="项目2图片">
+                <h3>人力管理系统</h3>
+                <p>人力管理系统采用 React.js 和 Django 等技术，支持员工管理、考勤跟踪、薪资处理等功能，并通过 RESTful API 实现与外部系统的集成。</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="/images/booking.png" alt="项目3图片">
+                <h3>订票系统</h3>
+                <p>订票系统采用 Vue.js 和 Spring Boot 等技术，提供票务查询、预订和支付功能，并通过安全的 API 实现与第三方支付和座位管理系统的集成。</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <footer>
+        <p>&copy; 2024 | Junbo Sun</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>错误页面</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <style>
+        /* 添加一些内联样式，使错误页面更美观 */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8d7da;
+            color: #721c24;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        main {
+            text-align: center;
+            background-color: #ffffff;
+            padding: 2rem;
+            border: 1px solid #f5c6cb;
+            border-radius: 8px;
+            max-width: 600px;
+            width: 100%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        p {
+            margin: 0.5rem 0;
+        }
+        pre {
+            background-color: #f1f1f1;
+            color: #333;
+            padding: 1rem;
+            border-radius: 5px;
+            text-align: left;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>发生错误</h1>
+        <p>抱歉，出现了一个问题。</p>
+        
+        <!-- 显示错误信息 -->
+        <p><strong>错误信息：</strong> <%= message %></p>
+
+        <% if (error.status) { %>
+            <p><strong>状态码：</strong> <%= error.status %></p>
+        <% } %>
+
+        <% if (error.stack) { %>
+            <h2>详细信息：</h2>
+            <pre><%= error.stack %></pre>
+        <% } %>
+    </main>
+</body>
+</html>
